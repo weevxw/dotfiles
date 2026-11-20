@@ -1,0 +1,18 @@
+::selection {
+  background: #cba6f766;
+}
+
+:root {
+  accent-color: #cba6f7;
+  caret-color: #cba6f7;
+  scrollbar-color: #45475a transparent;
+}
+
+:focus-visible {
+  outline-color: #cba6f7;
+}
+
+code, pre, kbd, samp {
+  font-family: "Fira Code", monospace !important;
+  font-variant-ligatures: contextual;
+}

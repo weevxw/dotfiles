@@ -1,0 +1,160 @@
+:root {
+    --radius: 14px !important;
+
+    --glass: #16101e;
+    --glass-float: #1b1424;
+
+    --font-ui: 'Geologica', 'Google Sans', system-ui, sans-serif;
+    --font-mono: 'Fira Code', monospace;
+}
+
+:root {
+    --ink: #16101e;
+    --text-1: #f5edf7;
+    --text-2: #decae2;
+    --text-3: #c3b1c9;
+    --text-4: #8a7396;
+    --text-5: #63536e;
+
+    --surface-1: hsla(285, 40%, 92%, 0.05);
+    --surface-2: hsla(285, 40%, 92%, 0.08);
+    --surface-3: hsla(285, 40%, 92%, 0.12);
+    --hover: hsla(300, 30%, 75%, 0.07);
+    --active: hsla(320, 40%, 78%, 0.13);
+
+    --border: hsla(320, 40%, 80%, 0.09);
+    --border-hover: hsla(320, 60%, 85%, 0.24);
+
+    --pink: #f5c2e7;
+    --pink-deep: #e79fd2;
+    --mauve: #cba6f7;
+    --red: #f38ba8;
+}
+
+:root {
+    --font-family: var(--font-ui) !important;
+
+    --md-sys-color-background: var(--glass) !important;
+    --md-sys-color-background-solid: var(--glass) !important;
+    --md-sys-color-surface: var(--glass) !important;
+    --md-sys-color-surface-solid: var(--glass) !important;
+    --md-sys-color-surface-dim: var(--glass) !important;
+    --md-sys-color-surface-dim-solid: var(--glass) !important;
+
+    --md-sys-color-surface-container-lowest: hsla(285, 40%, 92%, 0.02) !important;
+    --md-sys-color-surface-container-low: var(--surface-1) !important;
+    --md-sys-color-surface-container: var(--surface-1) !important;
+    --md-sys-color-surface-container-high: var(--surface-2) !important;
+    --md-sys-color-surface-container-highest: var(--surface-3) !important;
+    --md-sys-color-surface-bright: var(--surface-3) !important;
+
+    --md-sys-color-surface-container-lowest-solid: #120d19 !important;
+    --md-sys-color-surface-container-low-solid: var(--glass-float) !important;
+    --md-sys-color-surface-container-solid: var(--glass-float) !important;
+    --md-sys-color-surface-container-high-solid: #211a2b !important;
+    --md-sys-color-surface-container-highest-solid: #2a2235 !important;
+    --md-sys-color-surface-bright-solid: #332a3f !important;
+
+    --md-sys-color-primary: var(--pink) !important;
+    --md-sys-color-on-primary: var(--ink) !important;
+    --md-sys-color-primary-container: var(--active) !important;
+    --md-sys-color-on-primary-container: var(--pink) !important;
+    --md-sys-color-secondary: var(--mauve) !important;
+    --md-sys-color-tertiary: var(--pink-deep) !important;
+    --md-sys-color-secondary-container: var(--surface-2) !important;
+    --md-sys-color-on-secondary-container: var(--text-2) !important;
+    --md-sys-color-tertiary-container: hsla(270, 70%, 82%, 0.14) !important;
+    --md-sys-color-error: var(--red) !important;
+    --md-sys-color-on-error: var(--ink) !important;
+
+    --md-sys-color-on-surface: var(--text-1) !important;
+    --md-sys-color-on-surface-solid: var(--text-1) !important;
+    --md-sys-color-on-surface-variant: var(--text-4) !important;
+    --md-sys-color-on-surface-variant-solid: var(--text-4) !important;
+    --md-sys-color-outline: var(--text-5) !important;
+    --md-sys-color-outline-variant: var(--border) !important;
+
+    --btn-primary-bg: var(--pink) !important;
+    --btn-primary-fg: var(--ink) !important;
+    --btn-primary-hover: var(--pink-deep) !important;
+
+    --md-shape-corner-l: var(--radius) !important;
+    --md-shape-corner-xl: var(--radius) !important;
+}
+
+html,
+body {
+    background: var(--glass) !important;
+}
+
+#cover-bg,
+.bg-mesh-layer,
+.m3-organic-bg,
+.home-ambient,
+.ambient-glow-backdrop,
+#jump-ambient-light {
+    display: none !important;
+}
+
+code, pre, kbd, .mono {
+    font-family: var(--font-mono) !important;
+}
+
+::selection {
+    background: hsla(320, 70%, 85%, 0.28);
+    color: var(--text-1);
+}
+
+.sidebar,
+.main-content,
+.right-panel,
+.playbar,
+.rail-drawer {
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius) !important;
+    box-shadow: none !important;
+}
+
+.m3-dropdown-menu {
+    background: var(--glass-float) !important;
+    border: 1px solid var(--border) !important;
+}
+
+.track-row:hover {
+    background: var(--hover) !important;
+}
+
+.nav-active-indicator {
+    background: var(--active) !important;
+    border-radius: 10px !important;
+}
+
+.btn-pill-primary {
+    background: var(--pink) !important;
+    color: var(--ink) !important;
+}
+
+input:focus,
+textarea:focus,
+.search-box:focus-within {
+    outline: none !important;
+    border-color: var(--border-hover) !important;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: hsla(320, 50%, 82%, 0.18);
+    border-radius: 8px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: hsla(320, 60%, 85%, 0.35);
+}

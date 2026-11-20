@@ -1,0 +1,689 @@
+:root {
+    --gap: 12px;
+    --radius: 14px;
+    --guild-pad: 12px;
+
+    --glass: hsla(265, 30%, 9%, 0.72);
+    --glass-float: hsla(266, 28%, 11%, 0.94);
+
+    --font-ui: 'Geologica', 'gg sans', 'Noto Sans', sans-serif;
+    --font-mono: 'Fira Code', 'gg mono', monospace;
+}
+
+:root {
+    --ink: hsl(265, 30%, 9%);
+    --text-1: hsl(285, 40%, 95%);
+    --text-2: hsl(290, 30%, 84%);
+    --text-3: hsl(285, 18%, 74%);
+    --text-4: hsl(280, 14%, 52%);
+    --text-5: hsl(275, 14%, 38%);
+
+    --surface-1: hsla(285, 40%, 92%, 0.05);
+    --surface-2: hsla(285, 40%, 92%, 0.08);
+    --surface-3: hsla(285, 40%, 92%, 0.12);
+    --hover: hsla(300, 30%, 75%, 0.07);
+    --active: hsla(320, 40%, 78%, 0.13);
+    --message-hover: hsla(285, 40%, 92%, 0.025);
+
+    --border: hsla(320, 40%, 80%, 0.09);
+    --border-hover: hsla(320, 60%, 85%, 0.24);
+
+    --pink-1: oklch(87% 0.07 340);
+    --pink-2: oklch(82% 0.09 345);
+    --pink-3: oklch(76% 0.11 348);
+    --pink-4: oklch(70% 0.12 350);
+    --pink-5: oklch(64% 0.12 352);
+
+    --mauve: oklch(78% 0.11 305);
+    --red: oklch(72% 0.12 5);
+    --green: oklch(80% 0.10 145);
+    --yellow: oklch(85% 0.09 90);
+    --blue: oklch(75% 0.10 265);
+
+    --accent: var(--pink-2);
+}
+
+body,
+:is(.theme-dark, .theme-darker, .theme-midnight, .theme-light):not(.custom-user-profile-theme) {
+    --font-primary: var(--font-ui);
+    --font-display: var(--font-ui);
+    --font-headline: var(--font-ui);
+    --font-code: var(--font-mono);
+
+    --app-frame-background: transparent;
+    --app-frame-border: transparent;
+    --background-base-lowest: var(--glass);
+    --background-base-lower: var(--glass);
+    --background-base-low: var(--glass);
+    --background-primary: var(--glass);
+    --background-secondary: transparent;
+    --background-secondary-alt: var(--surface-1);
+    --background-tertiary: transparent;
+    --background-surface-high: var(--glass-float);
+    --background-surface-higher: var(--glass-float);
+    --background-surface-highest: var(--glass-float);
+    --bg-surface-raised: var(--glass-float);
+    --bg-surface-overlay: var(--glass-float);
+    --modal-background: var(--glass-float);
+    --modal-footer-background: transparent;
+    --home-background: transparent;
+    --chat-background-default: var(--surface-1);
+    --card-background-default: var(--surface-1);
+    --background-code: var(--surface-1);
+    --background-accent: var(--surface-2);
+    --background-brand: var(--accent);
+    --background-mod-subtle: var(--hover);
+    --background-mod-muted: var(--hover);
+    --background-mod-normal: var(--surface-2);
+    --background-mod-strong: var(--surface-3);
+    --background-scrim: hsla(265, 30%, 4%, 0.55);
+    --background-scrim-lightbox: hsla(265, 30%, 4%, 0.85);
+    --background-feedback-critical: color-mix(in oklch, var(--red), transparent 82%);
+    --background-feedback-info: color-mix(in oklch, var(--blue), transparent 82%);
+    --background-feedback-positive: color-mix(in oklch, var(--green), transparent 82%);
+    --background-feedback-warning: color-mix(in oklch, var(--yellow), transparent 82%);
+    --background-feedback-notification: var(--accent);
+    --background-code-addition: color-mix(in oklch, var(--green), transparent 82%);
+    --background-code-deletion: color-mix(in oklch, var(--red), transparent 82%);
+
+    --interactive-background-hover: var(--hover);
+    --interactive-background-active: var(--active);
+    --interactive-background-selected: var(--active);
+    --interactive-icon-default: var(--text-4);
+    --interactive-icon-hover: var(--text-3);
+    --interactive-icon-active: var(--text-2);
+    --interactive-text-default: var(--text-4);
+    --interactive-text-hover: var(--text-3);
+    --interactive-text-active: var(--text-2);
+    --interactive-muted: var(--text-5);
+    --channels-default: var(--text-4);
+    --channel-icon: var(--text-4);
+
+    --text-default: var(--text-3);
+    --text-strong: var(--text-2);
+    --text-subtle: var(--text-4);
+    --text-muted: var(--text-5);
+    --text-link: var(--pink-1);
+    --text-brand: var(--pink-1);
+    --text-overlay-light: var(--ink);
+    --text-feedback-critical: var(--red);
+    --text-feedback-info: var(--pink-1);
+    --text-feedback-positive: var(--green);
+    --text-feedback-warning: var(--yellow);
+    --text-status-online: var(--green);
+    --text-status-idle: var(--yellow);
+    --text-status-dnd: var(--red);
+    --text-status-offline: var(--text-4);
+    --textbox-markdown-syntax: var(--text-5);
+    --chat-text-muted: var(--text-5);
+    --channel-text-area-placeholder: var(--text-5);
+    --input-placeholder-text-default: var(--text-5);
+    --input-text-default: var(--text-3);
+    --input-background-default: var(--surface-1);
+    --input-border-default: var(--border);
+    --input-border-hover: var(--border-hover);
+    --input-border-active: var(--accent);
+    --channeltextarea-background: var(--surface-1);
+
+    --icon-default: var(--text-4);
+    --icon-subtle: var(--text-4);
+    --icon-muted: var(--text-5);
+    --icon-strong: var(--text-2);
+    --icon-link: var(--text-4);
+    --icon-voice-muted: var(--accent);
+    --icon-feedback-critical: var(--red);
+    --icon-feedback-info: var(--blue);
+    --icon-feedback-positive: var(--green);
+    --icon-feedback-warning: var(--yellow);
+    --icon-status-online: var(--green);
+    --icon-status-idle: var(--yellow);
+    --icon-status-dnd: var(--red);
+    --icon-status-offline: var(--text-4);
+    --status-online: var(--green);
+    --status-positive: var(--green);
+    --status-positive-background: var(--green);
+    --status-speaking: var(--green);
+    --status-warning: var(--yellow);
+    --status-danger: var(--red);
+
+    --border-subtle: var(--border);
+    --border-muted: var(--border);
+    --border-normal: var(--border);
+    --border-strong: var(--border-hover);
+    --border-focus: var(--accent);
+
+    --control-primary-background-default: var(--pink-3);
+    --control-primary-background-hover: var(--pink-4);
+    --control-primary-background-active: var(--pink-5);
+    --control-primary-border-default: transparent;
+    --control-primary-border-hover: transparent;
+    --control-primary-border-active: transparent;
+    --control-primary-text-default: var(--ink);
+    --control-primary-text-hover: var(--ink);
+    --control-primary-text-active: var(--ink);
+    --control-primary-icon-default: var(--ink);
+    --control-primary-icon-hover: var(--ink);
+    --control-primary-icon-active: var(--ink);
+    --control-secondary-background-default: var(--surface-2);
+    --control-secondary-background-hover: var(--surface-3);
+    --control-secondary-background-active: var(--active);
+    --control-secondary-border-default: var(--border);
+    --control-secondary-border-hover: var(--border);
+    --control-secondary-border-active: var(--border);
+    --control-secondary-text-default: var(--text-2);
+    --control-secondary-text-hover: var(--text-1);
+    --control-secondary-text-active: var(--text-1);
+    --control-secondary-icon-default: var(--text-2);
+    --control-secondary-icon-hover: var(--text-1);
+    --control-secondary-icon-active: var(--text-1);
+    --control-critical-primary-background-default: var(--red);
+    --control-critical-primary-background-hover: color-mix(in oklch, var(--red), black 10%);
+    --control-critical-primary-background-active: color-mix(in oklch, var(--red), black 20%);
+    --control-critical-primary-text-default: var(--ink);
+    --control-critical-primary-text-hover: var(--ink);
+    --control-critical-primary-text-active: var(--ink);
+    --control-critical-primary-icon-default: var(--ink);
+    --control-critical-primary-icon-hover: var(--ink);
+    --control-critical-primary-icon-active: var(--ink);
+    --control-connect-background-default: var(--green);
+    --control-connect-background-hover: color-mix(in oklch, var(--green), black 10%);
+    --control-connect-background-active: color-mix(in oklch, var(--green), black 20%);
+    --control-connect-text-default: var(--ink);
+    --control-connect-icon-default: var(--ink);
+    --control-icon-only-background-hover: var(--hover);
+    --control-icon-only-background-active: var(--active);
+    --control-icon-only-icon-default: var(--text-4);
+    --control-icon-only-icon-hover: var(--text-2);
+    --control-icon-only-icon-active: var(--text-2);
+    --control-brand-foreground: var(--accent);
+    --redesign-button-secondary-background: var(--surface-2);
+    --redesign-button-secondary-pressed-background: var(--surface-3);
+    --redesign-button-secondary-text: var(--text-2);
+
+    --badge-background-default: var(--accent);
+    --badge-notification-background: var(--accent);
+    --badge-text-default: var(--ink);
+
+    --mention-background: color-mix(in oklch, var(--accent), transparent 85%);
+    --mention-foreground: var(--pink-1);
+    --message-background-hover: var(--message-hover);
+    --message-mentioned-background-default: linear-gradient(to right, color-mix(in oklch, var(--accent), transparent 88%) 40%, transparent);
+    --message-mentioned-background-hover: linear-gradient(to right, color-mix(in oklch, var(--accent), transparent 82%) 40%, transparent);
+    --message-highlight-background-default: linear-gradient(to right, color-mix(in oklch, var(--mauve), transparent 90%) 40%, transparent);
+    --message-highlight-background-hover: linear-gradient(to right, color-mix(in oklch, var(--mauve), transparent 85%) 40%, transparent);
+    --message-reacted-background-default: color-mix(in oklch, var(--accent), transparent 82%);
+    --message-reacted-text-default: var(--text-2);
+
+    --reaction-background-default: var(--surface-1);
+    --reaction-background-hover: var(--surface-2);
+    --reaction-background-active: var(--surface-3);
+    --reaction-background-reacted-default: color-mix(in oklch, var(--accent), transparent 82%);
+    --reaction-background-reacted-hover: color-mix(in oklch, var(--accent), transparent 74%);
+    --reaction-border-default: transparent;
+    --reaction-border-hover: var(--border);
+    --reaction-border-reacted-default: color-mix(in oklch, var(--accent), transparent 50%);
+    --reaction-text-default: var(--text-3);
+    --reaction-text-reacted-default: var(--text-1);
+
+    --checkbox-background-default: var(--surface-2);
+    --checkbox-background-selected-default: var(--accent);
+    --checkbox-border-default: var(--border);
+    --checkbox-icon-active: var(--ink);
+    --radio-background-default: var(--surface-2);
+    --radio-background-selected-default: var(--accent);
+    --radio-thumb-background-active: var(--ink);
+    --switch-background-default: var(--surface-3);
+    --switch-background-hover: var(--surface-3);
+    --switch-background-selected-default: var(--accent);
+    --switch-background-selected-hover: var(--pink-3);
+    --switch-border-default: var(--border);
+    --switch-border-selected-default: transparent;
+    --slider-track-background: var(--surface-3);
+    --progressbar-track-background: var(--surface-2);
+    --progressbar-indicator-background: var(--accent);
+
+    --polls-voted-fill: color-mix(in oklch, var(--accent), transparent 85%);
+    --polls-victor-fill: color-mix(in oklch, var(--green), transparent 85%);
+
+    --user-profile-border: var(--border);
+    --user-profile-overlay-background: var(--glass-float);
+    --user-profile-toolbar-background: var(--glass-float);
+    --user-profile-toolbar-border: var(--border);
+    --user-profile-background-hover: var(--hover);
+
+    --scrollbar-auto-thumb: var(--surface-3);
+    --scrollbar-auto-track: transparent;
+    --scrollbar-thin-thumb: var(--surface-3);
+    --scrollbar-thin-track: transparent;
+
+    --brand-260: var(--accent);
+    --brand-360: var(--accent);
+    --brand-500: var(--accent);
+    --red-400: var(--red);
+    --red-500: var(--red);
+    --green-360: var(--green);
+    --yellow-300: var(--yellow);
+
+    --elevation-low: none;
+    --elevation-medium: none;
+    --elevation-high: 0 8px 24px hsla(265, 30%, 4%, 0.35);
+}
+
+html,
+body,
+#app-mount,
+.appMount__51fd7,
+.app__160d8,
+.bg__960e4  {
+    background: transparent !important;
+}
+
+::selection {
+    background: color-mix(in oklch, var(--mauve), transparent 60%);
+    color: var(--text-1);
+}
+
+code,
+pre,
+.hljs {
+    font-variant-ligatures: contextual;
+}
+
+:root {
+    --custom-guild-list-padding: var(--guild-pad);
+}
+body {
+    --custom-guild-list-width: calc(var(--guildbar-avatar-size) + var(--custom-guild-list-padding) * 2 + 2px);
+}
+
+.guilds__5e434 ,
+.sidebarList__5e434 ,
+.panels__5e434 ,
+.chat_f75fb0 > .subtitleContainer_f75fb0 ,
+.chatContent_f75fb0 ,
+.container_c8ffbb ,
+.content_f75fb0 > .membersWrap_c8ffbb ,
+.content_f75fb0 > aside > .outer_c0bea0 ,
+.container__133bf > .container__9293f ,
+.homeWrapper__0920e > .container__9293f ,
+.container__01ae2 > .container__9293f ,
+.container_fb64c9 > .container__9293f ,
+.peopleColumn__133bf ,
+.mainPageScroller__80907 ,
+.searchResultsWrap_a98f3b ,
+.chat_fb64c9 ,
+.container_a592e1 ,
+.callContainer_cb9592 ,
+.shop__6db1d ,
+.chat_f75fb0 > .header_c791b2 ,
+.chat_f75fb0 > .scrollerBase_d125d2 ,
+.container__8a031  {
+    background-color: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+
+    &:hover {
+        border-color: var(--border-hover);
+    }
+}
+
+.sidebar__5e434  {
+    margin: 0 var(--gap) var(--gap) var(--gap);
+}
+.guilds__5e434 {
+    margin: 0 var(--gap) var(--gap) 0;
+}
+.sidebarList__5e434 {
+    margin-bottom: calc(var(--custom-app-panels-height, 0px) + var(--gap));
+}
+.page__5e434,
+.container__133bf {
+    padding: 0 var(--gap) var(--gap) 0;
+    border: none !important;
+    background: none;
+}
+.page__5e434 > .chat_f75fb0,
+.page__5e434 > .container__133bf {
+    padding: 0;
+}
+.subtitleContainer_f75fb0,
+#app-mount .container__9293f {
+    margin-bottom: var(--gap);
+    border-bottom: none;
+}
+.container_c8ffbb,
+.content_f75fb0 > .membersWrap_c8ffbb,
+.content_f75fb0 > aside > .outer_c0bea0,
+.searchResultsWrap_a98f3b {
+    margin-left: var(--gap);
+    overflow: hidden;
+    height: auto;
+    min-width: fit-content;
+}
+.chatContent_f75fb0,
+.shop__6db1d,
+.container_a592e1 {
+    overflow: hidden;
+}
+.wrapper_cb9592 ~ .content_f75fb0 {
+    padding-top: var(--gap);
+}
+.page__5e434 > div > .chatLayerWrapper__01ae2  {
+    margin: 0 var(--gap) var(--gap) 0;
+    height: calc(100% - var(--gap));
+}
+.container__01ae2 {
+    padding-left: calc(var(--gap) - var(--chat-resize-handle-width, 0px));
+}
+
+.panels__5e434 {
+    bottom: 0;
+    right: 0;
+    left: unset;
+    width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width));
+}
+.guilds__5e434 {
+    margin-bottom: 0;
+}
+
+.chat_f75fb0,
+.title_f75fb0,
+.container__2637a ,
+.clickable_f37cb1,
+.header_f37cb1 ,
+.privateChannels_e6b769,
+.scroller__99e7c,
+.members_c8ffbb,
+.member_c8ffbb,
+.tabBody__133bf,
+.homeWrapper__0920e,
+.applicationStore_f07d62,
+.aside_f58343,
+.container__01ae2,
+.channelChatWrapper_cb9592,
+.wrapper_cb9592,
+.container_fb64c9,
+.titleBar__0bd4a,
+.wrapper_cdf8a9,
+.panel__5dec7,
+.form_f75fb0 .themedBackground__74017,
+.standardSidebarView__23e6b .contentRegion__23e6b,
+.contentRegionScroller__23e6b,
+#vc-spotify-player {
+    background: none !important;
+    border: none;
+}
+.resizeHandle__01ae2 {
+    background: transparent;
+}
+
+.sidebar__5e434::after,
+.children__9293f::after,
+.chatGradient__36d07,
+.chat_ee72fa::before,
+.chat_fb64c9::before,
+.burstGlow__23977 {
+    display: none;
+}
+.wrapper_ef3116 {
+    mask: none;
+}
+
+.standardSidebarView__23e6b {
+    background: var(--glass-float);
+}
+.sidebarRegionScroller__23e6b {
+    background: transparent;
+}
+
+.bannerImage_f37cb1,
+.bannerImg_f37cb1 {
+    width: 100%;
+}
+.bannerVisible_f37cb1 .headerEllipseBackdrop_f37cb1 {
+    display: none;
+}
+
+.scroller_ef3116 {
+    padding-top: var(--guild-pad) !important;
+    padding-bottom: var(--guild-pad);
+}
+.listItem__650eb,
+.folderGroup__48112 {
+    width: 100%;
+}
+
+.wrapper__58105 {
+    width: calc((var(--guild-pad) - 4px) / 2 + 4px);
+}
+.item__58105 {
+    width: 4px;
+    border-radius: 4px;
+    margin-left: calc((var(--guild-pad) - 4px) / 2);
+    background-color: var(--accent);
+}
+
+.wrapper__6e9f8[data-list-item-id='guildsnav___home'] > .childWrapper__6e9f8 {
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    box-sizing: border-box;
+    transition: background 0.25s ease, border-color 0.25s ease;
+}
+.wrapper__6e9f8[data-list-item-id='guildsnav___home'] > .childWrapper__6e9f8 > svg {
+    display: none;
+}
+.wrapper__6e9f8[data-list-item-id='guildsnav___home'] > .childWrapper__6e9f8::before {
+    content: '';
+    width: 50%;
+    height: 50%;
+    background: var(--pink-2);
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 1c.7 5.6 2.9 8.6 11 11-8.1 2.4-10.3 5.4-11 11-.7-5.6-2.9-8.6-11-11 8.1-2.4 10.3-5.4 11-11z'/%3E%3C/svg%3E") center / contain no-repeat;
+    transition: background 0.25s ease, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.wrapper__6e9f8[data-list-item-id='guildsnav___home']:is(:hover, .selected__6e9f8) > .childWrapper__6e9f8 {
+    background: color-mix(in oklch, var(--pink-2), transparent 82%);
+    border-color: color-mix(in oklch, var(--pink-2), transparent 55%);
+}
+.wrapper__6e9f8[data-list-item-id='guildsnav___home']:is(:hover, .selected__6e9f8) > .childWrapper__6e9f8::before {
+    background: var(--pink-1);
+    transform: rotate(90deg) scale(1.1);
+}
+
+body {
+    --top-bar-height: var(--gap);
+    --custom-app-top-bar-height: var(--top-bar-height);
+}
+.refresh-title-bar-small {
+    --custom-app-top-bar-height: var(--top-bar-height);
+}
+#app-mount {
+    --custom-channel-header-height: calc(var(--guildbar-avatar-size) + var(--space-xs) + 2px);
+}
+.title_c38106,
+.bar_c38106 .backForwardButtons__63abb,
+.trailing_c38106 > a[href='https://support.discord.com'],
+.winButtons_c38106  {
+    display: none;
+}
+.trailing_c38106 {
+    position: absolute;
+    top: calc(var(--top-bar-height) + 8px + 1px);
+    right: calc(var(--gap) + 1px);
+    gap: var(--space-xs);
+    z-index: 1000;
+    padding-right: var(--space-xs);
+    height: 32px;
+}
+.trailing_c38106 > div,
+.trailing_c38106 div.clickable__81391 {
+    width: 32px !important;
+    height: 32px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notice__6e2b9,
+.notice__29487 {
+    margin: 0 var(--gap) var(--gap) var(--gap);
+    height: 40px;
+    line-height: 38px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-sizing: border-box;
+}
+.base__5e434:has(> :is(.notice__6e2b9, .notice__29487)) > .bar_c38106 > .trailing_c38106 {
+    top: calc(var(--top-bar-height) + 8px + 1px + 40px + var(--gap));
+}
+.subtitleContainer_f75fb0 {
+    height: var(--custom-channel-header-height);
+}
+.title_f75fb0.container__9293f {
+    min-height: 0;
+    height: auto;
+}
+
+.base__5e434 {
+    --button-count: 0;
+    &:has(> .bar_c38106 > .trailing_c38106 > div:nth-of-type(1)) { --button-count: 1; }
+    &:has(> .bar_c38106 > .trailing_c38106 > div:nth-of-type(2)) { --button-count: 2; }
+    &:has(> .bar_c38106 > .trailing_c38106 > div:nth-of-type(3)) { --button-count: 3; }
+    &:has(> .bar_c38106 > .trailing_c38106 > div:nth-of-type(4)) { --button-count: 4; }
+    --top-bar-right-margin: calc(var(--button-count) * (32px + var(--space-xs)));
+}
+.toolbar__9293f,
+.navBarContent__131a1,
+.headerBarContent__1a9ce {
+    padding-right: var(--top-bar-right-margin);
+}
+.page__5e434:has(> div > .chatLayerWrapper__01ae2) .chat_f75fb0.threadSidebarOpen_f75fb0 .toolbar__9293f,
+.video_cb9592.sidebarOpen_cb9592 .toolbar__9293f {
+    padding-right: 0;
+}
+.searchFloating__1ac1c {
+    right: calc(var(--top-bar-right-margin) + var(--space-sm));
+}
+.chat_f75fb0 > .layerContainer__59d0d {
+    z-index: 999;
+}
+#app-mount,
+.modal_e44912 {
+    --custom-viewport-padding: calc(var(--space-40) + var(--custom-app-top-bar-height));
+}
+
+.channelTextArea_f75fb0 {
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    background: var(--surface-1);
+}
+.channelTextArea_f75fb0:focus-within {
+    border-color: var(--border-hover);
+}
+.message__5126c {
+    border-radius: var(--radius-md);
+    margin-left: 4px;
+}
+
+.message__5126c.mentioned__5126c::before,
+.replying__5126c::before,
+.ephemeral__5126c::before {
+    width: 3px;
+    border-radius: 3px;
+    height: calc(100% - 2 * var(--radius-sm));
+    top: var(--radius-sm);
+    left: calc(var(--radius-sm) / 2);
+}
+.mentioned__5126c::before {
+    background-color: var(--accent) !important;
+}
+.replying__5126c::before {
+    background-color: var(--mauve) !important;
+}
+.divider__5126c,
+.divider__908e2 {
+    --divider-color: var(--accent);
+}
+.newMessagesBar__0f481 {
+    background-color: var(--pink-3);
+    color: var(--ink);
+}
+.embedFull__623de {
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--border-hover);
+}
+.embedFull__623de,
+.hljs,
+.imageWrapper_af017a,
+.container__9271d {
+    border-radius: var(--radius-md);
+}
+.botTagRegular__82f07 {
+    background-color: var(--accent);
+    color: var(--ink);
+}
+
+.menu_c1e9c4,
+.tooltip_c36707,
+.contentWrapper__08434 ,
+.autocomplete__6b0e0,
+.messagesPopoutWrap__432f4 ,
+.popout__76f04 {
+    background: var(--glass-float);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(12px);
+}
+.outer_c0bea0  {
+    border: 1px solid var(--border);
+    border-radius: var(--radius) !important;
+}
+
+rect[fill='#45a366'],
+path[fill='#45a366'] {
+    fill: var(--green);
+}
+rect[fill='#ffc04e'] {
+    fill: var(--yellow);
+}
+rect[fill='#da3e44'] {
+    fill: var(--red);
+}
+rect[fill='#84858d'] {
+    fill: var(--text-4);
+}
+rect[fill='#9147ff'] {
+    fill: var(--mauve);
+}
+
+.vc-switch-container {
+    background-color: var(--surface-3) !important;
+}
+.vc-switch-container.vc-switch-checked {
+    background-color: var(--accent) !important;
+}
+
+.listItem__650eb:has(:is([data-list-item-id='guildsnav___guild-discover-button'], [data-list-item-id='guildsnav___app-download-button'])),
+.channel__972a0:has(:is(a[href='/store'], a[href='/shop'], a[href='/quest-home'])) ,
+.nowPlayingColumn__133bf ,
+.channelAppLauncher_e6e74f ,
+.buttons__74017 > :has(.stickerButton__74017) ,
+.clanTag__972a0 ,
+.container__37e49 .container_df39b2  {
+    display: none !important;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--surface-3);
+    border-radius: 6px;
+    border: none;
+}
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
